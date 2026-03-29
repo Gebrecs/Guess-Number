@@ -18,7 +18,7 @@ let highScore = 0;
 //     if(number>=1&&number<=20){
 //         number=prompt('Enter a number between 1 and 20');
 //     }else{
-//         alert('invalid input :Enter a number between 1 and 20');
+//         alert ('invalid input: Enter a number between 1 and 20');
 //     }
 // }
 
