@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Favorite Icon Toggler</title>
+    <style>
+        .filled {
+            color: red;
+        }
+
+        .favorite-icon {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<ul class ="item-list">
+    <li>
+        Heart<button class="favorite-icon">&#9825;</button></li>
+    <li>
+        Heart<button class="favorite-icon">&#9825;</button></li>
+    <li>
+        Heart<button class="favorite-icon">&#9825;</button></li>
+
+</ul>
+
+<script>
+    // this selects all the buttons in the list
+    const buttons=document.querySelectorAll(".favorite-icon");
+    buttons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            // if the button is filled, it will be removed and the icon will be changed to a unfilled heart
+            if (button.classList.contains("filled")) {
+                button.classList.remove("filled");
+                button.innerHTML = "&#9825;";
+                // if the button is unfilled, it will be filled and the icon will be changed to a filled heart
+            } else {
+                button.classList.add("filled");
+                button.innerHTML = "&#10084;";
+            }
+        });
+    });
+    for(let node of document.body.childNodes){
+        console.log(node);
+    }
+</script>
+
+</body>
+</html>
